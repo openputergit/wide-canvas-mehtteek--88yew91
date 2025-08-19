@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Theory - Media Production Company</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --obsidian: #0B0B0B;
+            --electric-blue: #00FFFF;
+            --smoke-grey: #555555;
+            --mist-white: #F5F5F5;
+            --silver-white: #E0E0E0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--obsidian);
+            color: var(--silver-white);
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px var(--electric-blue);
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px var(--electric-blue);
+        }
+
+        .nav-link:hover {
+            color: var(--electric-blue);
+            text-shadow: 0 0 10px var(--electric-blue);
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(45deg, var(--obsidian), #1a1a1a);
+        }
+
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 0 20px var(--electric-blue);
+        }
+
+        .portfolio-item {
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="smooth-scroll">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-opacity-80 bg-black backdrop-filter backdrop-blur-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-white">Mad Theory</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link text-white">About</a>
+                    <a href="#services" class="nav-link text-white">Services</a>
+                    <a href="#portfolio" class="nav-link text-white">Portfolio</a>
+                    <a href="#contact" class="nav-link text-white">Contact</a>
+                </div>
+                <button class="md:hidden text-white"><i class="bi bi-list text-2xl"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="container mx-auto px-6 z-10 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 glow-text">
+                Crafting Stories, Engineering Sound, Defining Vision
+            </h1>
+            <a href="#about" class="btn-glow bg-transparent border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-full text-lg hover:bg-cyan-400 hover:text-black transition-all">
+                Explore Mad Theory
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="glass-card p-8">
+                    <h2 class="text-3xl font-bold mb-6 text-white">About Mad Theory</h2>
+                    <p class="text-lg mb-6">
+                        We are a full-service media production powerhouse, bringing together creative minds and technical expertise to deliver exceptional content across multiple platforms.
+                    </p>
+                </div>
+                <div class="glass-card h-96 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white glow-text">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-6">
+                    <i class="bi bi-music-note-beamed text-4xl text-cyan-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Audio Engineering</h3>
+                    <p>Professional sound design and music production services.</p>
+                </div>
+                <div class="glass-card p-6">
+                    <i class="bi bi-camera-reels text-4xl text-cyan-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Video Production</h3>
+                    <p>Commercial and narrative film production.</p>
+                </div>
+                <div class="glass-card p-6">
+                    <i class="bi bi-person-badge text-4xl text-cyan-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-4">Artist Management</h3>
+                    <p>Complete artist development and management services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white glow-text">Our Work</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="portfolio-item glass-card h-64 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-20"></div>
+                <div class="portfolio-item glass-card h-64 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-20"></div>
+                <div class="portfolio-item glass-card h-64 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-20"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 gradient-bg">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12 text-white glow-text">Get In Touch</h2>
+            <div class="max-w-lg mx-auto glass-card p-8">
+                <form>
+                    <div class="mb-6">
+                        <input type="text" placeholder="Your Name" class="w-full bg-transparent border-2 border-cyan-400 rounded-lg p-3 text-white focus:outline-none focus:border-white">
+                    </div>
+                    <div class="mb-6">
+                        <input type="email" placeholder="Your Email" class="w-full bg-transparent border-2 border-cyan-400 rounded-lg p-3 text-white focus:outline-none focus:border-white">
+                    </div>
+                    <div class="mb-6">
+                        <textarea placeholder="Your Message" rows="4" class="w-full bg-transparent border-2 border-cyan-400 rounded-lg p-3 text-white focus:outline-none focus:border-white"></textarea>
+                    </div>
+                    <button type="submit" class="btn-glow w-full bg-transparent border-2 border-cyan-400 text-cyan-400 py-3 rounded-lg hover:bg-cyan-400 hover:text-black transition-all">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu toggle
+        const menuButton = document.querySelector('button');
+        const navLinks = document.querySelector('.md\\:flex');
+        
+        menuButton.addEventListener('click', () => {
+            navLinks.classList.toggle('hidden');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
